@@ -27,7 +27,8 @@ Tools
 You can use any tools which are easily accessible on a Linux system:
 * Whatever programming language you are comfortable with;
 * Whatever open-source libraries that are installed by default or are easily
-  installable (but please don't make me do a configure/make/make install!)
+  installable (but please don't make me do a configure/make/make install too
+  many times!)
 * Whatever data structures and algorithms make sense.
 
 The only things that don't make sense are tools that already solve the problem
@@ -109,10 +110,11 @@ Under that subdirectory, you need to create at least three files:
      +-- test
 
 Your final solution should be published on GitHub, and you should send me the
-link to the repository.
+link to the repository.  After I've cloned it, please remove the solution from
+GitHub (or make it private) so that other people who take this test can't
+just take your solution.
 
-In order to run and test your submission, I will perform the following
-actions:
+In order to run and test your submission, I will do something like:
 
 1.  I'll create a new virtual Linux image (Ubuntu Linux 9.10 x86_64) and
     boot that virtual machine;
@@ -175,8 +177,8 @@ explicit approval.
 Francais
 --------
 
-Sur demande, on vous fornira cette README en francais.  Vous pouvez utiliser
-le francais dans tous les elements de cette teste de programmation: pour
+Sur demande, on vous fournira cette README en francais.  Vous pouvez utiliser
+le francais dans tous les elements de ce test de programmation: pour
 le rapport, pour les commentaires dans le code, et meme pour le correcteur
 lui-meme.
 
