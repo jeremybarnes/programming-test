@@ -1,0 +1,182 @@
+Programming Test
+================
+
+The goal of this programming test is to show off your problem solving
+abilities, by quickly solving a non-trivial problem.  
+
+Your task is to create a program with similar functionality to Google's
+spelling corrector for internet queries.  For example, if you type
+
+"progarmming tets"
+
+into Google, it will come back with:
+
+ Did you mean: programming test
+
+If you type "michelle jordan", it will come back with:
+
+ See results for: michael jordan
+
+Obviously, it is not possible to replicate Google's query corrector in an
+afternoon, but it should be possible to make some progress towards it.
+
+
+Tools
+-----
+
+You can use any tools which are easily accessible on a Linux system:
+* Whatever programming language you are comfortable with;
+* Whatever open-source libraries that are installed by default or are easily
+  installable (but please don't make me do a configure/make/make install!)
+* Whatever data structures and algorithms make sense.
+
+The only things that don't make sense are tools that already solve the problem
+for you.  For example, if your solution just calls the aspell libraries to
+do the work for you, you haven't done a very good job of showing off your
+problem solving skills (and those libraries won't solve the Michelle/Michael
+jordan problem above, anyway).
+
+
+Code
+----
+
+You can copy open-source code from the internet assuming that the license of
+this code allows you to do so.  This code must be clearly identified and the
+license information and copyright must be included.  It is your responsibility
+to keep your obligations under the terms of the licenses.
+
+
+Data
+----
+
+I am expecting that you will probably need to download text from the internet
+to analyze for known words and word pairs.  Other possibilities include using
+dictionary files (eg, try "aspell dump master" on a Linux system).
+
+
+Report
+------
+
+You will need to submite a report.  THE REPORT IS THE MOST IMPORTANT PART
+OF THE SUBMISSION.  It is from the report that I can know your thought
+processes and problem solving approach.  Please don't leave the report to
+the last minute.
+
+The report should document your design, assumptions and how you would improve
+your system if you were to work on it longer.
+
+
+Scope
+-----
+
+You will need to be very careful to limit the scope of your solution to
+something that you can do in a reasonable amount of time.  I encourage you to
+work iteratively by solving a very small problem first and gradually expanding
+the scope of your solution until you're out of time or are happy that your
+solution demonstratess your programming and problem solving ability.
+
+You should provide a report (as a README file) in which you describe the design
+of your system, as well as the limitations of your design, and in particular
+how you would improve your system if you were to continue working on it.
+
+If you run into technical problems (for example, a bug in a library that you
+are using or a bad design decision from which you cannot recover) that cannot
+be solved quickly, I encourage you to 
+
+
+Details
+=======
+
+You should clone the github repository at
+http://github.com/jeremybarnes/programming-test and create under it a
+top-level directory named after yourself (eg, I would create a directory
+jeremy-barnes).
+
+Under that subdirectory, you need to create at least three files:
+1.  A Makefile, that can be used to both train and build your system;
+2.  An executable file called "test" that can be used to test your system;
+3.  A report file in which you describe your solution.
+4.  A README file that describes the requirements to run the software (eg,
+    if you need version 4.8.2 of the JRE, then write that there and describe
+    how I can install it).
+
+/
++-- README  (this file)
++-- your-name/
+     |
+     +-- README
+     +-- Makefile
+     +-- test
+
+Your final solution should be published on GitHub, and you should send me the
+link to the repository.
+
+In order to run and test your submission, I will perform the following
+actions:
+
+1.  I'll create a new virtual Linux image (Ubuntu Linux 9.10 x86_64) and
+    boot that virtual machine;
+2.  I'll clone your repository onto the virtual machine.
+3.  I'll read the README and go and get any software that I need to install
+    in order to run your submission according to your instructions;
+4.  I'll run "make compile" to build the code;
+5.  I'll run "make train" to train whatever models are in your code;
+6.  I'll run the "test" program with various inputs and look at the output
+    to get an idea of your system;
+
+In other words, there is a directory named after you, and in that directory
+there is at least a Makefile, a binary file (or shell script) called test,
+and documentation to tell me how to run the system and how you solved the
+problem.
+
+If you don't have access to a Linux (or UNIX) machine then please submit
+whatever you have that works on your system.  I'll do my best to adapt.
+
+
+Build System
+------------
+
+The build system is makefile-based.  If you use a dynamic language there might
+not be any need to compile; in this case make compile should be a no-op.
+
+
+Testing Program
+---------------
+
+The testing program should take in one command line argument (the query) and
+output one or more lines, each of which contains a possible correction for
+the query (where the first line contains the most likely correction).  For
+example:
+
+$ ./test "Michelle Jordan"
+Michelle Jordan
+Michael Jordan
+
+$ ./test "progarminng test"
+programming test
+
+
+Other Notes
+-----------
+
+There is a certain amount of trust involved in me running code on my system
+that comes from an outside source.  I trust you, but please note that any
+attempt to harm my computer via the installation of malicious software or
+to upload information from my computer to the internet, etc will be referred
+directly to the police.
+
+I intend to keep a copy of the various submissions to this programming test.
+You agree that I may do so.  The copyright remains with you.  At some point
+in the future, I may decide to write about the submissions that I received in
+an anonymous manner; any public mention of your name will be made with your
+explicit approval.
+
+
+Francais
+--------
+
+Sur demande, on vous fornira cette README en francais.  Vous pouvez utiliser
+le francais dans tous les elements de cette teste de programmation: pour
+le rapport, pour les commentaires dans le code, et meme pour le correcteur
+lui-meme.
+
