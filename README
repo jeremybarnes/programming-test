@@ -82,7 +82,9 @@ how you would improve your system if you were to continue working on it.
 
 If you run into technical problems (for example, a bug in a library that you
 are using or a bad design decision from which you cannot recover) that cannot
-be solved quickly, I encourage you to 
+be solved quickly, I encourage you to move on quickly rather than spend too
+much time trying to fix it.  A creative solution that doesn't quite run due to a
+bug in a library or an unfortunate design decision is much better than nothing.
 
 
 Details
@@ -91,7 +93,9 @@ Details
 You should clone the github repository at
 http://github.com/jeremybarnes/programming-test and create under it a
 top-level directory named after yourself (eg, I would create a directory
-jeremy-barnes).
+jeremy-barnes).  Please do this with the command-line version of git, as
+if you clone via GitHub people will be able to see that you are doing the
+test.
 
 Under that subdirectory, you need to create at least three files:
 1.  A Makefile, that can be used to both train and build your system;
